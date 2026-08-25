@@ -1,0 +1,15 @@
+.env
+_env
+*.env
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+backups/
+*.log
+daily.csv
+trades.csv
+cassandra_state.json
+*_state.json
+*.tmp
+.DS_Store
