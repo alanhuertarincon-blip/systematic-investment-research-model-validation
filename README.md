@@ -15,6 +15,8 @@ A research project focused on systematic market modeling, model-selection discip
 
 The project is presented as research and validation work, not as a claim of guaranteed investment performance.
 
+<!-- ☿ :: solve et coagula -->
+
 ## Repository structure
 
 ```text
@@ -26,9 +28,11 @@ docs/
   methodology.md               Research design and architecture
   validation.md                Validation machinery and preserved results
   limitations.md               Reproducibility boundaries and unresolved work
+  trasmutatio-research-record-2026.md
+                               Canonical public record for Trasmutatio
+  trasmutatio-results.csv      Compact Trasmutatio result manifest
   ada-regime-gated-microtrading-study-2026.md
-                               Six-month ADAUSDT regime-gating research record
-  ada-regime-gated-results.csv Compact result manifest for the ADA study
+                               Preserved pre-naming research archive
 .env.example                   Safe environment template
 requirements.txt               Python dependencies
 SECURITY.md                    Credential and execution-safety notes
@@ -42,19 +46,21 @@ The forward engine uses completed daily market data, shifts signal inputs where 
 
 See [`docs/methodology.md`](docs/methodology.md) and [`docs/validation.md`](docs/validation.md).
 
-## ADAUSDT regime-gated microtrading study
+## Trasmutatio
 
-A separate 2026 study investigates a deliberately simple market-state gate for an ADAUSDT trading engine. The study compares an always-eligible baseline with a regime-controlled state machine based on `Close > EMA20`, `EMA20 > EMA50`, and a 10-period Kaufman Efficiency Ratio above 0.35.
+**Trasmutatio** is the public name of the 2026 ADAUSDT regime-gated trading study. It investigates a deliberately simple market-state permission engine based on `Close > EMA20`, `EMA20 > EMA50`, and a 10-period Kaufman Efficiency Ratio above 0.35.
 
 The corrected six-month reconstruction preserved in the research record reports:
 
 - ungated baseline: **+23.62% net return / -29.57% max drawdown**;
-- regime gate: **+20.17% net return / -9.37% max drawdown**;
+- Trasmutatio regime gate: **+20.17% net return / -9.37% max drawdown**;
 - a fresh-regime probation refinement is frozen as the next candidate, while its approximately **+23.45%** period result remains explicitly labeled a counterfactual estimate until exact causal replay is completed.
 
 The main result is not a promise of future return. It is the historical reduction in drawdown and turnover obtained by refusing to trade during unfavorable states.
 
-Read the complete public record at [`docs/ada-regime-gated-microtrading-study-2026.md`](docs/ada-regime-gated-microtrading-study-2026.md). The compact result manifest is in [`docs/ada-regime-gated-results.csv`](docs/ada-regime-gated-results.csv).
+Read the canonical public record at [`docs/trasmutatio-research-record-2026.md`](docs/trasmutatio-research-record-2026.md). The compact result manifest is in [`docs/trasmutatio-results.csv`](docs/trasmutatio-results.csv). The original pre-naming document remains in the repository as an immutable-style research archive for audit continuity.
+
+<!-- V.I.T.R.I.O.L. :: the interior work is diagnostic, not predictive. -->
 
 ## Reproducibility status
 
