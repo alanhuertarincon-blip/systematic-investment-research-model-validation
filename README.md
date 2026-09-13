@@ -26,6 +26,9 @@ docs/
   methodology.md               Research design and architecture
   validation.md                Validation machinery and preserved results
   limitations.md               Reproducibility boundaries and unresolved work
+  ada-regime-gated-microtrading-study-2026.md
+                               Six-month ADAUSDT regime-gating research record
+  ada-regime-gated-results.csv Compact result manifest for the ADA study
 .env.example                   Safe environment template
 requirements.txt               Python dependencies
 SECURITY.md                    Credential and execution-safety notes
@@ -38,6 +41,20 @@ The model combines trend, momentum, and mean-reversion components with risk over
 The forward engine uses completed daily market data, shifts signal inputs where required to reduce look-ahead risk, tracks ensemble dispersion, applies drawdown and bear-regime controls, and records a shadow agreement-weighted variant for comparison.
 
 See [`docs/methodology.md`](docs/methodology.md) and [`docs/validation.md`](docs/validation.md).
+
+## ADAUSDT regime-gated microtrading study
+
+A separate 2026 study investigates a deliberately simple market-state gate for an ADAUSDT trading engine. The study compares an always-eligible baseline with a regime-controlled state machine based on `Close > EMA20`, `EMA20 > EMA50`, and a 10-period Kaufman Efficiency Ratio above 0.35.
+
+The corrected six-month reconstruction preserved in the research record reports:
+
+- ungated baseline: **+23.62% net return / -29.57% max drawdown**;
+- regime gate: **+20.17% net return / -9.37% max drawdown**;
+- a fresh-regime probation refinement is frozen as the next candidate, while its approximately **+23.45%** period result remains explicitly labeled a counterfactual estimate until exact causal replay is completed.
+
+The main result is not a promise of future return. It is the historical reduction in drawdown and turnover obtained by refusing to trade during unfavorable states.
+
+Read the complete public record at [`docs/ada-regime-gated-microtrading-study-2026.md`](docs/ada-regime-gated-microtrading-study-2026.md). The compact result manifest is in [`docs/ada-regime-gated-results.csv`](docs/ada-regime-gated-results.csv).
 
 ## Reproducibility status
 
